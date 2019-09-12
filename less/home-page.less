@@ -1,13 +1,18 @@
 .home {
 
+
+
+
+
+
   .content-section {
     margin: 30px 0;
-    display: flex;
+    padding: 5%;
+    .custom-layout();
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -21,41 +26,97 @@
         border-radius: 10px;
       }
     }
-  }
 
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
+    .inverse-content {
+      padding-bottom: 30px;
+      border-bottom: 2px dashed @navigation-border;
+
+      .text-content {
+        padding-left: 1%;
+        padding-right: 0;
+      }
+
+      .img-content {
+        padding-right: 1%;
+        padding-left: 0;
+      }
     }
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+    .content-destination {
+      width: 75%;
+      margin: 0 auto 30px;
+
+      img {
+        border-radius: 10px;
+      }
     }
+
+
   }
 
+  // home //
   .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
+    .dotBorderTop();
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    margin-top: 6%;
 
-    img {
-      border-radius: 10px;
+    .pickDestination {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      justify-content: center;
     }
   }
 
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
+  .content-pickMinor {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
 
     .destination {
-      width: 30%;
-      margin-bottom: 30px;
+      width: 50%;
+      margin: 2%;
+      justify-content: center;
+
+      button {
+        .btnSettings();
+      }
+
     }
   }
-}// home
+}
+
+
+@media @mobile {
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-pick{
+    .content-pickMinor{
+      display: flex;
+      flex-direction: column;
+      .dotBorderTop();
+      align-items: center;
+      justify-content: center;
+      margin-top: 5%;
+      .destination{
+        width: 100%;
+        justify-content: center;
+          align-items: center;
+          button {
+            .btnSettings(@width:450px;);
+          }
+      }
+    }
+  }
+}

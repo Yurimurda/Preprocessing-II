@@ -1,1 +1,67 @@
 // Navigation Styles here
+
+
+
+.topNavMeta {
+    border: 2px dotted grey;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2%;
+    padding-top: 1%;
+
+    .topNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+            margin: 10px;
+        }
+    }
+}
+
+
+.busImgMeta {
+    display: flex;
+    justify-content: center;
+
+    .busImg {
+        border: 2px dotted grey;
+        width: 55%;
+        padding-bottom: 2%;
+        margin: 4%;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+}
+
+
+
+
+@media @mobile {
+    .topNavMeta {
+
+        .topNav {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+    .busImgMeta {
+        .busImg {
+            width: 100%;
+            margin-top: 0%;
+        }
+    }
+}
